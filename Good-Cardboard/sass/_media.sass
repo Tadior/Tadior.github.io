@@ -1,0 +1,182 @@
+@media (max-width: 576px)
+    .hidden-mobile
+        display: none
+    .header
+        &-logo 
+            background: $active-color url(../img/logo-mobile.png) center no-repeat
+            width: 35px
+            height: 35px
+            border-radius: 4px
+        &-contacts 
+            &-phone
+                font-size: 14px
+                margin-right: 0px
+                &s 
+                    flex-direction: column
+                &:first-child
+                    border: none
+        &-button
+            display: inline-block
+            padding: 9px
+    .main 
+        text-align: center
+        padding-top: 50px
+        &-text
+            &_title
+                font-style: 22px
+                color: $active-color
+        &_subtitle
+            font-size: 18px
+            margin-bottom: 40px
+        &_form
+            background-color: transparent
+            padding: 10px
+    .form
+        display: block
+        &-title 
+            padding-right: 0
+            font-size: 15px
+            line-height: 1.4
+        &-input
+            display: block
+            margin: 0 auto
+        input 
+            margin-bottom: 13px
+
+@media (min-width: 577px) and (max-width: 768px)
+    .hidden-mobile
+        display: none
+    .header
+        &-logo 
+            background: $active-color url(../img/logo-mobile.png) center no-repeat
+            width: 35px
+            height: 35px
+            border-radius: 4px
+        &-contacts 
+            &-phone
+                font-size: 17px
+                margin-right: 0px
+                &s 
+                    flex-direction: row
+                &:nth-child(2)
+                    margin-left: 13px
+                    margin-right: 10px
+        &-button
+            display: inline-block
+            padding: 9px
+    .main-text
+        text-align: center
+        &_title
+            color: $active-color
+    .form-title
+        padding: 0
+    .form-input 
+        text-align: center
+        margin-right: 40px
+@media (min-width: 769px) and (max-width: 992px)
+    .header
+        &-contacts
+            &-phone
+                font-size: 20px
+                margin-right: 0px
+                &s 
+                    flex-direction: column
+                &:first-child
+                    border: none
+        &-button
+            display: inline-block
+            padding: 18px
+//Вторая секция features
+@media (max-width: 768px)
+    .features
+        padding: 24px 0 40px 0
+        &-block
+            display: flex
+            flex-basis: auto
+            &_img
+                flex-basis: 20%
+    .numbers
+        &-block
+            display: block
+            text-align: center
+            flex-basis: 0
+            align-items: center
+            width: 100%
+@media (min-width: 769px) and (max-width: 992px)
+    .main-img::before
+        width: 327px
+        height: 317px
+        left: 62%
+        top: -30px
+    .numbers
+        &-block
+            width: 31%
+            &_title
+                font-size: 28px
+    .features-block
+        display: inline-block
+        text-align: center
+        &_decr
+            text-align: bottom
+    .img-s
+        text-align: center
+        max-height: 50px
+        min-width: 50px
+//Секция production
+@media (max-width: 768px)
+    .production
+        padding: 28px 0 43px 0
+        &-text
+            position: absolite
+            padding-bottom: 22px
+            min-width: 100%
+            &_title
+                position: center
+                text-align: center
+                width: 100%
+                margin-left: 0
+            &_descr
+                position: center
+                text-align: center
+    .visibility
+        display: block
+    .hidden
+        display: none
+@media (min-width: 961px) and (max-width: 991px) //Костыль//
+    .img-max
+        min-width: 330px
+        max-height: 245px //Костыль кончился//
+@media (min-width: 769px) and (max-width: 960px)
+    .img-max
+        min-width: 330px
+        max-height: 245px
+@media (min-width: 769px) and (max-width: 992px)
+    .production
+        padding: 28px 0 43px 0
+        &-text
+            position: absolite
+            padding-bottom: 22px
+            min-width: 100%
+            &_title
+                position: center
+                text-align: center
+                width: 100%
+                margin-left: 0
+            &_descr
+                position: center
+                text-align: center
+    .visibility
+        display: block
+    .hidden
+        display: none    
+//Секция contacts//
+@media (max-width: 768px)
+    .contacts-block
+        position: static
+        text-align: center
+        padding: 36px 0 28px 0 
+    .visibility
+        display: block
+    .hidden
+        display: none
+            
