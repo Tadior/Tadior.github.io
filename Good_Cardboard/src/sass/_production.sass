@@ -1,0 +1,41 @@
+.production
+    padding: 
+        top: 80px
+        bottom: 90px
+    &-slider
+        position: relative
+        z-index: 2
+        &_top
+            margin-bottom: 13px
+            height: 377px
+            overflow-y: hidden
+        &_bottom
+            padding: 0 30px
+            height: 78px
+            overflow-y: hidden
+            img 
+                margin: 0 6px
+    &-text
+        max-width: 379px
+        &_title
+            position: relative
+            padding: 20px 0
+            color: $text-color-light
+            background-color: $active-color
+            margin-left: -10%
+            margin-top: 19px
+            margin-bottom: 20px
+            padding-left: 10%
+            z-index: -1
+            width: 110%
+            font-size: 28px
+            font-weight: 300
+        &_descr
+            font-size: 16px
+            font-weight: 300
+            line-height: 24px
+            text-align: justify
+.visibility
+    display: none
+.hidden
+    display: block
