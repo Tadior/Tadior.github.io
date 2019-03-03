@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "OpenSans-Light";
+    src: './fonts/OpenSans-Light.ttf';
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PN-Bold";
+    src: './fonts/ProximaNova-Bold.ttf';
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: './fonts/Roboto-Bold.ttf';
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PN-Light";
+    src: './fonts/ProximaNova-Light.ttf';
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PN-Regular";
+    src: './fonts/ProximaNova-Regular.ttf';
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PN-Semibold";
+    src: './fonts/ProximaNova-Semibold.ttf';
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Thin";
+    src: './fonts/Roboto-Thin.ttf';
+    font-weight: normal;
+    font-style: normal;
+}
