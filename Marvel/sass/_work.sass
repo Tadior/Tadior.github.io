@@ -1,0 +1,80 @@
+.work
+    padding-top: 150px
+    text-align: center
+    background-color: $text-color-yelow
+    &-photos
+        margin-top: 57px
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+    &-photo
+        display: flex
+        max-width: 395px
+        position: relative
+        flex-grow: 0.5
+        flex-basis: 385px
+        img
+            max-width: 400px
+            max-height: 311px
+    &-menu
+        margin-top: 67px
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+    &-btn
+        padding: 12px 18px
+        border: 1px solid #000000
+        text-decoration: none
+        color: #000
+        font-family: 'Montserrat' , sans-serif
+        font-size: 13px
+        font-weight: 700
+        margin-right: 5px
+.work-btn:nth-child(1)
+    background: url('../img/work-menu.png') center center no-repeat
+    background-color: #000
+.work-btn:hover
+    background-color: #000
+    color: #fff
+    transition: 0.7s
+.work .headline-bg
+    margin-top: -77px
+.work-photo_text
+    font-family: 'Montserrat' , sans-serif
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: 600
+    color: #444444
+    background-color: rgba(223, 221, 221, 0.8)
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 15px 0 25px
+    opacity: 0
+    transition: 1s
+    transform: translateY(40px) 
+    span
+        font-size: 12px
+        font-weight: normal
+.work-hover_btn
+    background: #fff url('../img/first-icon-expert.png') center center no-repeat 
+    width: 33px
+    height: 33px
+    border: 1px solid
+    border-radius: 50%
+    outline: none
+.work-hover_btn:nth-child(2n)
+    background: #fff url('../img/second-icon-expert.png') center center no-repeat
+.work-hover_btn:hover
+    background-color: $text-color-yelow
+    border: none
+    cursor: pointer
+.work-all_btn 
+    background-color: rgba(223, 221, 221, 0.8)
+    border-radius: 30px
+    padding: 10px 10px 0 10px
+    position: absolute
+    right: 10px
+    bottom: 40px

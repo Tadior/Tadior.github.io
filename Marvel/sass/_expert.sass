@@ -1,0 +1,70 @@
+.expert
+    margin: 220px 0
+    text-align: center
+    .headline-bg
+        margin-top: -76px
+    &-items
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        margin-top: 130px
+    &-item
+        cursor: pointer
+        &_all
+            background-color: #ffe400
+            img
+                display: none
+        &_active
+            background-color: $text-color-yelow
+            padding: 96px 0 50px 0
+            max-width: 360px
+            img
+                margin-top: 40px
+        &_text
+            font-size: 24px
+            font-family: 'Montserat' , sans-serif
+            text-transform: uppercase
+            color: #332e00
+            font-weight: 700
+            span
+                font-size: 16px
+                font-weight: 600
+                margin-top: 25px
+        &_paragraph
+            display: flex
+            align-items: center
+            flex-flow: row wrap
+            font-size: 14px
+            font-family: 'Muli' ,sans-serif
+            font-weight: 600
+            margin: 75px 40px 140px 40px
+    &-text
+        font-size: 16px
+        font-weight: 600
+        font-family: 'Montserat' , sans-serif
+        text-transform: uppercase
+        color: $text-color-dark-grey
+        margin-top: 10px
+        padding: 25px 0
+        &-all
+            background-color: #ebebeb
+    &-paragraph
+        font-size: 11px
+        font-weight: 600
+        font-family: 'Montserat' , sans-serif
+        text-transform: uppercase
+        color: $text-color-dark-grey
+        padding: 25px 0
+        border-top: dashed #b7b7b7
+.expert-item_active
+    display: none
+.active 
+    display: block
+    &-block
+        display: block
+.expert-item_actives
+    background-color: $text-color-yelow
+    padding: 96px 0 50px 0
+    max-width: 360px
+    img
+        margin-top: 40px
