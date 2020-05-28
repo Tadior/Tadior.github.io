@@ -1,10 +1,11 @@
-$('.notification-slider').slick({
-    dots: true,
-    arrows: false,
-    infinite: false,
-    speed: 600,
-    autoplay: false,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+$(function(){
+    $('.message__blocks').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
 
+
+  
+});
