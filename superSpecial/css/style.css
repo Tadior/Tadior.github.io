@@ -439,10 +439,8 @@ title {
 }
 
 .plug {
+  position: relative;
   padding: 42px 0 66px 0;
-  background: url(../img/light-bg.png) 1125px -342px no-repeat, url(../img/dark-bg.png) -660px 611px no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .plug__header {
@@ -450,6 +448,7 @@ title {
 }
 
 .plug .videos {
+  z-index: 2;
   margin-top: 32px;
   width: 100%;
 }
@@ -502,25 +501,65 @@ title {
   color: #2579bf;
 }
 
-@media (max-width: 1380px) {
-  .plug {
-    background: url(../img/light-bg.png) 1215px -342px no-repeat, url(../img/dark-bg.png) -622px 859px no-repeat;
+.bg__img {
+  position: absolute;
+  overflow: hidden;
+}
+
+.light__img {
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.dark__img {
+  bottom: 0;
+  left: 0;
+}
+
+.dark-img {
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (max-width: 1419px) {
+  .light__img {
+    width: 300px;
+  }
+
+  .dark__img {
+    width: 300px;
   }
 }
 
-@media (max-width: 1300px) {
-  .plug {
-    background: url(../img/light-bg.png) center center no-repeat, url(../img/dark-bg.png) -622px 958px no-repeat;
+@media (max-width: 1136px) {
+  .dark__img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 848px) {
+  .light__img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 639px) {
+  .light__img {
+    width: 150px;
+    top: auto;
+    bottom: 15px;
+    right: 0;
+  }
+
+  .dark__img {
+    display: none;
   }
 }
 
 @media (max-width: 390.98px) {
   .logo__img {
     width: 200px;
-  }
-
-  .plug {
-    background: url(../img/light-bg.png) 1215px -342px no-repeat, url(../img/dark-bg.png) -622px 784px no-repeat;
   }
 
   .plug__topic {
@@ -530,21 +569,4 @@ title {
   .plug__info {
     font-size: 20px;
   }
-}
-
-.webp .plug { background: url(../img/light-bg.webp) 1125px -342px no-repeat, url(../img/dark-bg.webp) -660px 611px no-repeat; }
-
-@media (max-width: 1380px) {
-
-  .webp .plug { background: url(../img/light-bg.webp) 1215px -342px no-repeat, url(../img/dark-bg.webp) -622px 859px no-repeat; }
-}
-
-@media (max-width: 1300px) {
-
-  .webp .plug { background: url(../img/light-bg.webp) center center no-repeat, url(../img/dark-bg.webp) -622px 958px no-repeat; }
-}
-
-@media (max-width: 390.98px) {
-
-  .webp .plug { background: url(../img/light-bg.webp) 1215px -342px no-repeat, url(../img/dark-bg.webp) -622px 784px no-repeat; }
 }
