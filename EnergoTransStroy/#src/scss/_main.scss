@@ -1,0 +1,70 @@
+.menu {
+   // .menu__logo-wrapper
+
+   &__logo-wrapper {
+      color: #525A75;
+      display: flex;
+      align-items: center;
+   }
+
+   // .menu__logo
+
+   &__logo {
+   }
+
+   // .menu__descr
+
+   &__descr {
+      margin-left: 31px;
+      position: relative;
+      max-width: 297px;
+      &::before {
+         position: absolute;
+         content: '';
+         top: -50%;
+         left: -19px;
+         height: 52px;
+         border: 1px solid #525A75;
+      }
+   }
+
+   // .menu__phone
+
+   &__phone {
+      position: relative;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #525A75;
+      max-width: 223px;
+      padding-left: 31px;
+      text-align: right;
+      &::before {
+         position: absolute;
+         content: '';
+         top: 2px;
+         left: 0;
+         background: url(../img/main/phone.svg) top left;
+         width: 20px;
+         height: 20px;
+         align-items: center;
+      }
+   }
+
+   // .menu__link
+
+   &__phone-link {
+      color: #232323;
+      text-decoration-line: underline;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      //text-align: center;
+   }
+}
+.main {
+   background: url(../img/main/background.jpg) center top no-repeat;
+   background-size: cover;
+   //padding-top: 82px;
+   margin-top: 82px;
+}

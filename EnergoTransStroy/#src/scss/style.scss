@@ -1,0 +1,233 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920; //<ШИРИНА МАКЕТА>
+$maxWidthContainer: 1210; //<ШИРИНА КОНТЕЙНЕРА В МАКЕТЕ + padding .container>
+$md1: $maxWidthContainer+12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: 'Montserrat';
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import 'null';
+@import '../../node_modules/normalize-scss/sass/normalize/import-now';
+
+body {
+   color: #000;
+   font-size: 14px;
+
+   &.lock {
+      overflow: hidden;
+   }
+}
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+   max-width: $maxWidthContainer + px;
+   width: 100%;   
+   margin: 0 auto;
+   padding: 0px 20px;
+
+   @media (max-width: $md1+px) {
+      max-width: 970px;
+   }
+
+   @media (max-width: $md2+px) {
+      max-width: 750px;
+   }
+
+   @media (max-width: $md3+px) {
+      max-width: none;
+      padding: 0 10px;
+   }
+}
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import 'fonts';
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import '_main';
+//@import '_footer';
+
+
+//</Стили для Бургер Меню>============================================================
+
+.menu {
+
+   // .menu__wrapper
+
+   &__wrapper {
+      padding: 0 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      &:before {
+         position: absolute;
+         content: '';
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 2;
+      }
+   }
+   &__container {
+      max-width: $maxWidthContainer + px;
+      width: 100%;
+      margin: 0 auto;
+   }
+
+   // .menu__body
+
+   &__body {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      align-items: center;
+   }
+
+   // .menu__logo
+
+   &__logo {
+      flex: 0 0 114px; // Размер логотипа
+      z-index: 3;
+      img {
+         max-width: 100%;
+         display: block;
+      }
+   }
+   &__burger {
+      display: none;
+      z-index: 3;
+   }
+
+   // .menu__burger
+
+   // .menu__nav
+
+   &__nav {
+      display: block;
+   }
+
+   // .menu__list
+
+   &__list {
+      display: flex;
+      position: relative;
+      z-index: 2;
+      li {
+         margin: 0px 0px 0px 20px;
+      }
+   }
+
+   // .menu__text
+
+   &__link {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 18px;
+      text-decoration: none;
+   }   
+}
+@media (max-width: 767px) {
+   .menu__logo{
+      flex: 0 0 40px;
+   }
+   .menu__body {
+      height: 50px;
+   }
+   .menu__burger {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      display: block;
+   }
+   .menu__nav {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease 0s;
+      background-color: red;
+      padding: 70px 10px 20px 10px;
+   }
+   .menu__list {
+      display: block;
+   }
+   .menu__list li {
+      margin: 0px 0px 20px 0px;
+   }
+   .bar{
+      padding: 0;
+      width: 30px;
+      height: 4px;
+      background-color: rgb(194, 197, 199);
+      display: block;
+      border-radius: 4px;
+      transition: all 0.4s ease-in-out;
+      position: absolute; 
+      transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+
+      &.bar-1{
+         top: 0;
+      }
+      &.bar-2{
+         top: 13.5px;
+         width: 1px;
+         transform: rotate(90deg);
+         left: 13.5px;
+      }
+      &.bar-3{
+         right: 0;
+         top: 13.5px;
+         width: 1px;
+         left: 13.5px;
+      }
+      &.bar-4 {
+         top: 13.5px;
+         bottom: 0;
+      }
+      &.bar-5 {
+         bottom: 0px;
+      }
+   }
+}
+
+.show {
+   &.menu__burger {
+      display: block;
+      .bar {
+         &-1 {
+            top: 13.5px;
+            background-color: transparent;
+         }
+         &-2 {
+            left: 0px;
+            width: 30px;
+            transform: rotate(45deg);
+         }
+         &-3 {
+            left: 0;
+            width: 30px;
+            transform: rotate(-45deg);
+         }
+         &-4 {
+            background-color: transparent;
+         }
+         &-5 {
+            bottom: 13.5px;
+            background-color: transparent;
+         }
+      }
+   }
+   &.menu__nav {
+      top: 0;
+   }
+}
