@@ -91,6 +91,10 @@
       margin-top: 65px;
    }
 
+   @media (max-width:721px) {
+      padding-top: 60px;
+   }
+
    
    // .main__content
 
@@ -127,11 +131,16 @@
       border-radius: 10px;
       max-width: 432px;
       line-height: 18px;
+      font-size: 15px;
       @media (max-width:986px) {
          width: 100%;
          text-align: center;
          margin: 0 auto;
          //max-width: none;
+      }
+      @media (max-width:474px) {
+         font-size: 14px;
+         padding: 10px 15px;
       }
    }
 

@@ -92,3 +92,46 @@
    }
 }
 
+.title {
+   font-weight: 500;
+   font-size: 30px;
+   color: #1F2E54;
+   position: relative;
+   max-width: max-content;
+   text-align: center;
+
+   @media (max-width: 450px) {
+      font-size: 23px;
+   }
+   &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: -43px;
+      border: 1px solid #214ADF;
+      border-right: none;
+      border-bottom: none;
+      border-top-left-radius: 5px;
+      width: 27px;
+      height: 25px;
+      @media (max-width: 450px) {
+         display: none;
+      }
+   }
+   &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: -43px;
+      border: 1px solid #214ADF;
+      border-left: none;
+      border-bottom: none;
+      border-top-right-radius: 5px;
+      width: 27px;
+      height: 25px;
+      @media (max-width: 450px) {
+         display: none;
+      }
+   }
+}
+
