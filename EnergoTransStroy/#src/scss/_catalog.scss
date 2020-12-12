@@ -18,7 +18,12 @@
 
    &__item {
       flex: 0 0 370px;
-      height: 290px;
+      position: relative;
+      //z-index: 3;
+      //overflow: hidden;
+      //max-height: 290px;
+      //height: 100%;
+      z-index: 4;
    }
 
    // .catalog__title
@@ -26,6 +31,9 @@
    &__title {
       display: flex;
       align-items: center;
+      margin: 0 auto;
+      justify-content: center;
+      height: 290px;
    }
 
    // .catalog__picture
@@ -38,28 +46,48 @@
       background-size: cover;
       text-align: center;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 17px;
       line-height: 116%;
       text-align: center;
-      width: 100%;
-      height: 100%;
+      height: 290px;
       color: #FFFFFF;
-      z-index: 1;
+      transition-duration: 1s;
       &_1 {
          background-image: url(../img/catalog/background_1.jpg);
       }
+      &_2 {
+         background-image: url(../img/catalog/background_2.jpg);
+      }
+      &_3 {
+         background-image: url(../img/catalog/background_3.jpg);
+      }
+      //&_1 {
+      //   background-image: url(../img/catalog/background_4.jpg);
+      //}
+   }
+
+   &__text {
+      max-width: 290px;
+      margin: 0 auto;
    }
 
    // .catalog__descr
 
    &__descr {
-      top: -100%;
+      //display: none;
       color: #243047;
       line-height: 150%;
       box-shadow: 0px 5px 15px rgba(45, 62, 124, 0.2);
       padding: 26px 41px 41px 26px;
-      position: relative;
-      z-index: -1;
+      position: absolute;
+      //position: relative;
+      top: 0;
+      //transition-duration: 1s;
+      transition: opacity ease 1s;
+      background-color: #fff;
+      //z-index: 1;
+      opacity: 0;
+      //padding-top: -100%;
       &::before {
          position: absolute;
          content: '';
@@ -71,13 +99,23 @@
          border-left: 15.5px solid transparent;
          border-right: 15.5px solid transparent;
          border-bottom: 31px solid #fff;
-         z-index: 1;
+         z-index: 2;
       }
    }
 }
-.catalog__picture:hover {
-   .catalog__descr {
-      top: 0;
-      z-index: 3;
-   }
+//.catalog__item:hover .catalog__descr {
+//   //.catalog__descr {
+//      display: block;
+//      //top: 100%;
+//      opacity: 1;
+//      //z-index: 3;
+//      //z-index: 0;
+//      &::before {
+//         top: -31px;
+//         z-index: 1;
+//      }
+//   //}
+//}
+.catalog__item:hover .catalog__picture {
+   font-size: 20px;
 }
