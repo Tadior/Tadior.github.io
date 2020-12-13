@@ -1,5 +1,6 @@
 .scheme {
    background: url(../img/scheme/background.jpg) center bottom no-repeat;
+   padding: 100px 0;
    // .scheme__container
 
    &__container {
@@ -53,6 +54,7 @@
       line-height: 99.9%;
       text-align: center;
       padding-left: 45px;
+      color: #214ADF;
 
       @media (max-width: 460 + px) {
          font-size: 35px;
@@ -74,6 +76,7 @@
          //margin-left: 15px;
          margin-left: 0px;
          padding: 0 10px;
+         font-size: 14px;
       }
    }
 
@@ -92,7 +95,7 @@
          bottom: 0;
          transform:translate(50%, 50%);
          height: 64px;
-         border-left: 1px solid black;
+         border-left: 1px solid #214ADF;
       }
          order: 1;
          @media (max-width: 1000 + px) {
@@ -110,7 +113,7 @@
          bottom: 0;
          transform:translate(50%, 50%);
          height: 64px;
-         border-left: 1px solid black;
+         border-left: 1px solid #214ADF;
       }
          order: 3;
          @media (max-width: 1000 + px) {
@@ -129,7 +132,7 @@
                bottom: 0;
                transform:translate(50%, 50%);
                height: 64px;
-               border-left: 1px solid black;
+               border-left: 1px solid #214ADF;
             }
          }
          @media (max-width: 1000 + px) {
@@ -148,7 +151,7 @@
             left: -150px;
             width: 150px;
             height: 1px;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid#214ADF;
 
             @media (max-width: 1000 + px) {
                position: absolute;
@@ -159,7 +162,7 @@
                width: 0;
                transform:translate(50%, 50%);
                height: 55%;
-               border-left: 1px solid black;
+               border-left: 1px solid#214ADF;
                border-bottom: none;
                z-index: -1;
             }
@@ -179,7 +182,7 @@
                bottom: 0;
                transform:translate(50%, 50%);
                height: 64px;
-               border-left: 1px solid black;
+               border-left: 1px solid #214ADF;
             }
                order: 4;
                @media (max-width: 1000 + px) {
@@ -198,7 +201,7 @@
             bottom: 0;
             transform:translate(50%, 50%);
             height: 64px;
-            border-left: 1px solid black;
+            border-left: 1px solid #214ADF;
             @media (max-width: 1000 + px) {
                display: none;
             }

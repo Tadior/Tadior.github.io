@@ -23,5 +23,9 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-html": "^1.0.2",
     "normalize-scss": "^7.0.1"
+  },
+  "dependencies": {
+    "lightgallery.js": "^1.4.0",
+    "swiper": "^6.4.1"
   }
 }

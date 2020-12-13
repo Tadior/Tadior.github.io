@@ -212,7 +212,11 @@ function html() { // Работа с Html
 }
 
 function css() { // Работа с Css
-   return src(path.src.css) // Возвращает путь к css
+   return src([
+         'node_modules/lightgallery.js/dist/css/lightgallery.css',
+         'node_modules/swiper/swiper-bundle.min.css',
+         path.src.css
+      ]) // Возвращает путь к css
       .pipe(
          scss({
             outputStyle: 'compressed' // Формировать сжатый css файл
@@ -230,13 +234,15 @@ function css() { // Работа с Css
 }
 
 function js() { // Работа с js
-   return src(path.src.js) // Путь к исходникам js
-       .pipe(
-           uglify() // Сжатие файла
-       )
-       .pipe(concat('script.min.js')) // Конкатенация  min.js
-       .pipe(dest(path.build.js)) //Выгружает файлы в готовый проект
-       .pipe(browsersync.stream()); // Перезагружает браузер
+   return src([
+         'node_modules/lightgallery.js/dist/js/lightgallery.min.js',
+         'node_modules/swiper/swiper-bundle.min.js',
+         path.src.js
+      ]) // Путь к исходникам js
+      .pipe(uglify()) // Сжатие файла
+      .pipe(concat('script.min.js')) // Конкатенация  min.js
+      .pipe(dest(path.build.js)) //Выгружает файлы в готовый проект
+      .pipe(browsersync.stream()); // Перезагружает браузер
 }
 
 function images() { // Работа с Картинками

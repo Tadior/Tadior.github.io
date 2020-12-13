@@ -1,5 +1,4 @@
 //Скрипт для Бургер меню ==========================
-
 const burger = document.querySelector('.menu__burger');
 const menuNav = document.querySelector('.menu__nav');
 
@@ -51,3 +50,28 @@ const catalogItems = document.querySelectorAll('.catalog__item');
 //function draw(timePassed, element) {
 //   element.style.top = timePassed / 20 + '%';
 //}
+
+lightGallery(document.getElementById('lightgallery'));
+
+const mySlider = new Swiper('.slider__wrapper', {
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+   pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+   },
+   slidesPerView: 1,
+   slidesPerGroup: 1,
+   loop: true,
+   spaceBetween: 2,
+   //breakpoints: {
+   //   620: { // Сработает при больше 320px
+   //      //mySlider.navigation.destroy()
+   //      navigation: {
+   //         hide
+   //      },
+   //   },
+   //},
+});

@@ -1,0 +1,121 @@
+.footer {
+   padding-top: 144px;
+   background: url(../img/footer/background.jpg) bottom left no-repeat;
+   // .footer__wrapper
+
+   &__wrapper {
+      display: flex;
+      justify-content: space-around;
+   }
+
+   // .footer__items
+
+   &__items {
+      display: flex;
+      margin-top: 136px;
+      justify-content: space-between;
+   }
+
+   // .footer__nav
+
+   &__nav {
+   }
+
+   // .footer__list
+
+   &__list {
+   }
+
+   // .footer__link
+
+   &__link {
+      line-height: 215.4%;
+      letter-spacing: 0.015em;
+      color: #fff;
+      font-weight: 300;
+      font-family: 'Montserrat';
+   }
+
+   // .footer__info
+
+   &__info {
+      //max-width: 428px;
+      //width: 100%;
+   }
+
+   // .footer__title
+
+   &__title {
+      color: rgba(255, 255, 255, 0.6);
+   }
+
+   // .footer__subtitle
+
+   &__subtitle {
+      line-height: 138.4%;
+      letter-spacing: 0.015em;
+      color: #FFFFFF;
+   }
+
+   // .footer__form
+
+   &__form {
+   }
+}
+.form {
+
+   // .form__text
+
+   &__text {
+   }
+
+   // .form__wrapper
+
+   &__wrapper {
+   }
+
+   // .form__input
+
+   &__input {
+
+      // .form__input_name
+
+      &_name {
+      }
+
+      // .form__input_number
+
+      &_number {
+      }
+
+      // .form__input_mail
+
+      &_mail {
+      }
+   }
+
+   // .form__check
+
+   &__check {
+   }
+
+   // .form__checkbox
+
+   &__checkbox {
+   }
+
+   // .form__check-descr
+
+   &__check-descr {
+   }
+
+   // .form__check-link
+
+   &__check-link {
+   }
+
+   // .form__btn
+
+   &__btn {
+   }
+}
