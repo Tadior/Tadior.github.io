@@ -19,38 +19,6 @@ burger.addEventListener('click', show);
 const catalogDescr = document.querySelectorAll('.catalog__descr');
 const catalogItems = document.querySelectorAll('.catalog__item');
 
-//catalogItems.forEach(item => {
-//   item.addEventListener('mouseover', () => {
-//      //catalogDescr.forEach(descr => {
-//      //   catalogAnimate(descr);
-//      //});
-//      const descr = item.querySelector('.catalog__descr');
-//      catalogAnimate(descr);
-//   });
-//});
-
-//function catalogAnimate(item) {
-//   const element = item;
-//   const start = Date.now(); // Запомнить время начала 
-//   const timer = setInterval(function() {
-//      // сколько времени прошло с начала анимации?
-//      let timePassed = Date.now() - start;
-
-//      if (timePassed >= 2000) {
-//         clearInterval(timer); // закончить анимацию через 2 секунды
-//         return;
-//      }
-
-//      // отрисовать анимацию на момент timePassed, прошедший с начала анимации
-//      draw(timePassed,element);
-//   }, 20);
-//}
-//// в то время как timePassed идёт от 0 до 2000
-//// left изменяет значение от 0px до 400px
-//function draw(timePassed, element) {
-//   element.style.top = timePassed / 20 + '%';
-//}
-
 lightGallery(document.getElementById('lightgallery'));
 
 const mySlider = new Swiper('.slider__wrapper', {
@@ -66,12 +34,44 @@ const mySlider = new Swiper('.slider__wrapper', {
    slidesPerGroup: 1,
    loop: true,
    spaceBetween: 2,
-   //breakpoints: {
-   //   620: { // Сработает при больше 320px
-   //      //mySlider.navigation.destroy()
-   //      navigation: {
-   //         hide
-   //      },
-   //   },
-   //},
 });
+
+//Меню------------------------
+
+const links = document.querySelectorAll('.menu__link');
+const before = document.querySelector('.menu__list').querySelectorAll('li');
+console.log(before);
+
+window.addEventListener('scroll', () => {
+   if(window.pageYOffset >= 200) {
+      links.forEach(link => {
+         link.classList.add('menu__color');
+      });
+      before.forEach(item => {
+         item.classList.add('bb');
+      });
+   } else {
+      links.forEach(link => {
+         link.classList.remove('menu__color');
+      });before.forEach(item => {
+         item.classList.remove('bb');
+      });
+   }
+});
+
+
+const anchors = document.querySelectorAll('a[href*="#"]'); //Находим все элементы с якорями
+for (let anchor of anchors) { //Перебор всех элементов
+  anchor.addEventListener('click', function(e) { // Событие клик, запуск функции
+    e.preventDefault(); //Отмена стандартного поведения браузера
+    
+    const blockID = anchor.getAttribute('href').substr(1);// Сортирует элементы с якорями
+
+    console.log(blockID);
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+}

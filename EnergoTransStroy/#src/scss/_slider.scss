@@ -1,32 +1,9 @@
 .slider {
 
-   // .slider__container
-
-   &__container {
-   }
-
-   // .slider__title
-
-   &__title {
-   }
-
-   // .slider__wrapper
-
    &__wrapper {
       margin-top: 51px;
       max-height: 450px;
    }
-
-   // .slider__items
-
-   &__items {
-   }
-
-   // .slider__item
-
-   &__item {
-   }
-
    // .slider__image
 
    &__image {
@@ -35,16 +12,7 @@
       }
    }
 }
-.container {
-}
-.title {
-}
-.swiper-container {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
+
 .swiper-button-prev {
    color: #fff;
    left: 50px;

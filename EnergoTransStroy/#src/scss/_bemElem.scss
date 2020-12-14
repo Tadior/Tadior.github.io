@@ -7,6 +7,7 @@
    color: $grey;
    padding: 39px 18px;
    max-width: 370px;
+   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.25);
    // .form__text
 
    &__text {
@@ -76,8 +77,6 @@
    // .form__btn
 
    &__btn {
-      //display: flex;
-      //justify-content: center;
       align-items: center;
       font-family: 'Montserrat';
       font-weight: 500;

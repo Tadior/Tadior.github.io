@@ -1,9 +1,9 @@
 .advantages {
    padding: 119px 0px 70px 0px;
    background: url(../img/advantages/background.jpg) bottom center no-repeat;
-   //background-size: cover;
-   // .advantages__container
-
+   @media (max-width: 767 + px) {
+      padding-bottom: 0;
+   }
    &__container {
    }
 
@@ -24,8 +24,6 @@
       flex-wrap: wrap;
    }
 
-   // .advantages__item
-
    &__item {
       flex: 0 0 327px;
       display: flex;
@@ -35,11 +33,6 @@
       margin: 20px 0;
    }
 
-   //&__circle {
-      
-   //}
-
-   // .advantages__picture
 
    &__picture {
       border-radius: 50%;
@@ -68,8 +61,4 @@
          padding: 0 10px;
       }
    }
-}
-.container {
-}
-.title {
 }

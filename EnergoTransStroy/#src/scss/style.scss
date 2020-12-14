@@ -151,6 +151,14 @@ body {
       text-decoration: none;
       transition-duration: 1s;
       width: 100%;
+      &.menu__color {
+         color: black;
+         font-weight: 600;
+         @media (max-width: 767 + px) {
+            color: #fff;
+            font-weight: 300;
+         }
+      }
    }
 }
 @media (max-width: 767px) {
@@ -267,5 +275,8 @@ li {
       bottom: -11px;
    }
 } 
+.bb::before {
+   border-color: black;
+}
 
 

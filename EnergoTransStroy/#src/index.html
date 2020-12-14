@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>ЭнергоТрансСтрой</title>
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style.min.css">
@@ -15,7 +15,7 @@
             <div class="menu__container">
                <div class="menu__body">
                   <div class="menu__logo-wrapper">
-                     <a href="#" class = 'menu__logo'>
+                     <a href="#logo" class = 'menu__logo' id='logo'>
                         <img src="img/main/logo.png" alt="">
                      </a>
                      <div class="menu__descr">
@@ -38,25 +38,25 @@
                   <nav class="menu__nav">
                      <ul class = 'menu__list'>
                         <li>
-                           <a class='menu__link' href="" id="">О компании</a>
+                           <a class='menu__link' href="#company" id="">О компании</a>
                         </li>
                         <li>
-                           <a class='menu__link' href="" id="">Преимущества </a>
+                           <a class='menu__link' href="#advantages" id="">Преимущества</a>
                         </li>
                         <li>
-                           <a class='menu__link' href="" id="">Каталог</a>
+                           <a class='menu__link' href="#catalog" id="">Каталог</a>
                         </li>
                         <li>
-                           <a class='menu__link' href="" id="">Схема работы</a>
+                           <a class='menu__link' href="#scheme" id="">Схема работы</a>
                         </li>
                         <li>
-                           <a class='menu__link' href="" id="">Сертификаты</a>
+                           <a class='menu__link' href="#documents" id="">Сертификаты</a>
                         </li>
                         <li>
-                           <a class='menu__link' href="" id="">Проекты</a>
+                           <a class='menu__link' href="#projects" id="">Проекты</a>
                         </li>
                         <li>
-                           <a class='menu__link' href="" id="">Контакты</a>
+                           <a class='menu__link' href="#contacts" id="">Контакты</a>
                         </li>
                      </ul>
                   </nav>
@@ -107,7 +107,7 @@
       </div>
    </div>
 
-   <section class="about">
+   <section class="about" id='company'>
       <div class="about__container container">
          <div class="about__items">
                <div class="about__picture">
@@ -133,7 +133,7 @@
       </div>
    </section>
 
-   <section class="advantages">
+   <section class="advantages" id='advantages'>
       <div class="advantages__container container">
          <div class="advantages__title title">
             Наши преимущества
@@ -232,70 +232,197 @@
       </div>
    </section>
 
-   <!--<section class="catalog">
+   <section class="catalog" id='catalog'>
       <div class="catalog__container container">
          <div class="catalog__items">
-            <div class="catalog__item">
-               <div class="catalog__title title">
-                  Каталог<br>продукции
-               </div>
-            </div>
+            <div class="catalog__wrapper">
 
-            <div class="catalog__item">
-               <div class="catalog__picture catalog__picture_1">
-                  <div class="catalog__text">
-                     Элегазовые выключатели
-                     собственной разработки
+               <div class="catalog__item catalog__item_fix">
+                  <div class="catalog__title title">
+                     Каталог<br>продукции
                   </div>
                </div>
-               <div class="catalog__descr">
-                  Подходят для работы в
-                  открытых и закрытых
-                  распределительных
-                  устройствах в условиях
-                  температурного режима
-                  от -55°С до +40°С. 
-               </div>
-            </div>
 
-            <div class="catalog__item">
-               <div class="catalog__picture catalog__picture_2">
-                  <div class="catalog__text">
-                     Элегазовые трансформаторы тока и напряжения
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_6">
+                     <div class="catalog__text">
+                        Токоограничивающий
+                        реактор
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
                   </div>
                </div>
-               <div class="catalog__descr">
-                  Подходят для работы в
-                  открытых и закрытых
-                  распределительных
-                  устройствах в условиях
-                  температурного режима
-                  от -55°С до +40°С. 
-               </div>
-            </div>
 
-            <div class="catalog__item">
-               <div class="catalog__picture catalog__picture_3">
-                  <div class="catalog__text">
-                     Токоограничивающий
-                     реактор
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_3">
+                     <div class="catalog__text">
+                        Дугогасящий агрегат
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
                   </div>
                </div>
-               <div class="catalog__descr">
-                  Подходят для работы в
-                  открытых и закрытых
-                  распределительных
-                  устройствах в условиях
-                  температурного режима
-                  от -55°С до +40°С. 
+
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_9">
+                     <div class="catalog__text">
+                        Сухой шунтирующий реактор
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
+                  </div>
                </div>
+
+            </div>
+            <div class="catalog__wrapper">
+
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_1">
+                     <div class="catalog__text">
+                        Элегазовые выключатели
+                        собственной разработки
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
+                  </div>
+               </div>
+
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_4">
+                     <div class="catalog__text">
+                        Сухой шунтирующий реактор
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
+                  </div>
+               </div>
+
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_7">
+                     <div class="catalog__text">
+                        Сухой дугогасящий реактор
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
+                  </div>
+               </div>
+
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_10">
+                     <div class="catalog__text">
+                        Комплектные транспортные подстанции (КТП)
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
+                  </div>
+               </div>
+
+            </div>
+
+            <div class="catalog__wrapper">
+
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_2">
+                     <div class="catalog__text">
+                        Элегазовые трансформаторы тока и напряжения
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
+                  </div>
+               </div>
+
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_5">
+                     <div class="catalog__text">
+                        Дугогасящий реактор
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
+                  </div>
+               </div>
+
+               <div class="catalog__item">
+                  <div class="catalog__picture catalog__picture_8">
+                     <div class="catalog__text">
+                        Сухой силовой трансформатор
+                     </div>
+                  </div>
+                  <div class="catalog__descr">
+                     Подходят для работы в
+                     открытых и закрытых
+                     распределительных
+                     устройствах в условиях
+                     температурного режима
+                     от -55°С до +40°С. 
+                  </div>
+               </div>
+
+               <button class="catalog__button">
+                  Скачать полный каталог
+               </button>
+
             </div>
 
          </div>
       </div>
-   </section>-->
+   </section>
 
-   <section class="scheme">
+   <section class="scheme" id='scheme'>
       <div class="scheme__container container">
          <div class="scheme__title title">
             Схема работы
@@ -371,7 +498,7 @@
       </div>
    </section>
 
-   <section class="gallery">
+   <section class="gallery" id='documents'>
       <div class="gallery__container container">
          <div class="gallery__title title">
             Сертификаты и результаты испытаний
@@ -393,7 +520,7 @@
       </div>
    </section>
 
-   <section class="slider">
+   <section class="slider" id='projects'>
       <div class="slider__container container">
          <div class="slider__title title">
             Выполненные проекты
@@ -440,7 +567,7 @@
       </div>
    </section>
 
-   <footer class="footer">
+   <footer class="footer" id='contacts'>
       <div class="footer__wrapper container">
          <div class="footer__items">
             <nav class="footer__nav">
@@ -477,7 +604,7 @@
                   г. Екатеринбург, ул. Фронтовых бригад 18 лит.Е
                </div>
 
-               <div class="footer__title">
+               <div class="footer__title footer__phone">
                   Телефон
                </div>
                <div class="footer__subtitle">

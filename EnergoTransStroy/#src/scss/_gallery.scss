@@ -80,3 +80,16 @@
 .gallery__item:hover.gallery__item::after {
    opacity: 1;
 }
+
+.lg-actions .lg-next::before {
+   content: '>';
+}
+.lg-actions .lg-prev::after {
+   content: '<';
+}
+.lg-toolbar .lg-close::after {
+   content: '✖';
+}
+.lg-toolbar .lg-download::after {
+   display: none;
+}
