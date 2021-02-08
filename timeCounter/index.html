@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <title>TimeCounter</title>
+</head>
+<body>
+   <main class="counter">
+      <div class="container">
+         <div class="counter__wrapper">
+            <form action="#">
+               <div class="counter__item">
+                  Введите дату
+                  <input type="date" class="counter__date" placeholder="Выберите текущую дату">
+               </div>
+               <div class="counter__item">
+                  Введите время
+                  <input type="time" class="counter__time" placeholder="Выберите текущее время">
+               </div>
+               <div class="counter__item">
+                  Введите количество часов
+                  <input type="text" class="counter__hours" placeholder="Количество часов">
+               </div>
+               <button class="counter__confirm">Рассчитать</button>
+            </form>
+            <div class="counter__result">
+
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+main {
+   background-color: aqua;
+   height: 100vh;
+   font-family: 'Montserrat', sans-serif;
+   color: #fff;
+}
+.container {
+   margin: 0 auto;
+   padding: 0 10px;
+   /*max-width: 1200px;*/
+}
+form {
+   display: flex;
+   /*flex-wrap: wrap;*/
+}
+.counter__item {
+   margin: 10px;
+   text-align: center;
+}
+.counter__wrapper {
+   padding: 20px;
+   margin: auto auto;
+   max-width: 900px;
+   border: 1px solid #000;
+   border-radius: 10px;
+   background-color: brown;
+}
+.counter__confirm {
+   padding: 10px;
+   background: none;
+   color: #fff;
+   border: 1px solid #fff;
+   cursor: pointer;
+}
+/*input {
+   width: 100%;
+}*/
+@media (max-width: 964px) {
+   form {
+      flex-direction: column;
+   }
+}
