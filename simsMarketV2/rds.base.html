@@ -1,343 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="css/style.min.css">
-        <link rel="shortcut icon" href="img/icons/sim.svg" type="image/svg">
-    </head>
-    <body>
-    <div class="wrapper">
-        <div class="content">
-            <header class="header">
-                <div class="header__container container">
-                    <div class="menu__wrapper">
-                        <div class="menu__container">
-                            <div class="menu__body">
-                                <div class="menu__burger">
-                                    <span class='bar bar-1'></span>
-                                    <span class='bar bar-2'></span>
-                                    <span class='bar bar-3'></span>
-                                    <span class='bar bar-4'></span>
-                                    <span class='bar bar-5'></span>
-                                </div>
-                                <a href="/" class="menu__logo">
+   <link rel="stylesheet" href="css/style.min.css">
+   <link rel="shortcut icon" href="img/icons/sim.svg" type="image/svg">
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="content">
+         <header class="header">
+            <div class="header__container container">
+               <div class="menu__wrapper">
+                  <div class="menu__container">
+                     <div class="menu__body">
+                        <div class="menu__burger">
+                           <span class='bar bar-1'></span>
+                           <span class='bar bar-2'></span>
+                           <span class='bar bar-3'></span>
+                           <span class='bar bar-4'></span>
+                           <span class='bar bar-5'></span>
+                        </div>
+                        <a href="/" class="menu__logo">
+                           <picture>
+                              <source srcset="img/header/logo.svg" type="image/webp">
+                              <img src="img/header/logo.svg" alt="Логотип">
+                           </picture>
+                        </a>
+                        <nav class="menu__nav">
+                           <div class="header__search">
+                              <div class="header__form">
+                                 <form action="{% url 'search' %}" method="GET" id="search_form">
+                                    <input type="text" class="header__input" placeholder="Введите запрос"
+                                       name="search_text">
+                                    <div class="header__confirm">
+                                       <a href="javascript:void(0);"
+                                          onclick="document.getElementById('search_form').submit();">
+                                          <picture>
+                                             <source srcset="img/header/loop.webp" type="image/webp">
+                                             <img src="img/header/loop.png" alt="Поиск">
+                                          </picture>
+                                       </a>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+
+                           <div class="header__info">
+                              <div class="header__item">
+                                 <div class="header__add">
+                                    <a href="{% url 'add_mod' %}">
+                                       <picture>
+                                          <source srcset="img/header/add.webp" type="image/webp">
+                                          <img src="img/header/add.png" alt="Добавить" class="header__add-picture">
+                                       </picture>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="header__item">
+                                 <div class="header__profile">
                                     <picture>
-                                        <source srcset="img/header/logo.svg"
-                                                type="image/webp">
-                                        <img src="img/header/logo.svg" alt="Логотип">
+                                       <img src="img/profile/item1.jpg" alt="Профиль" class="header__profile-picture">
                                     </picture>
-                                </a>
-                                <nav class="menu__nav">
-                                    <div class="header__search">
-                                        <div class="header__form">
-                                            <form action="{% url 'search' %}" method="GET" id="search_form">
-                                                <input type="text" class="header__input"
-                                                       placeholder="Введите запрос" name="search_text">
-                                                <div class="header__confirm">
-                                                    <a href="javascript:void(0);" onclick="document.getElementById('search_form').submit();">
-                                                        <picture>
-                                                            <source srcset="img/header/loop.webp" type="image/webp">
-                                                            <img src="img/header/loop.png" alt="Поиск">
-                                                        </picture>
-                                                    </a>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
 
-                                    <div class="header__info">
-                                        <div class="header__item">
-                                            <div class="header__add">
-                                                <a href="{% url 'add_mod' %}">
-                                                    <picture>
-                                                        <source srcset="img/header/add.webp"
-                                                                type="image/webp">
-                                                        <img src="img/header/add.png"
-                                                             alt="Добавить" class="header__add-picture">
-                                                    </picture>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="header__item">
-                                            <div class="header__profile">
-                                                <picture>
-                                                    <img src="img/profile/item1.jpg"
-                                                         alt="Профиль"
-                                                         class="header__profile-picture">
-                                                </picture>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="header__menu">
-                    <div class="header__wrapper">
-                        <div class="header__elem">
-                            <div class="header__profile">
-                                <picture>
-                                    <img src="img/profile/item1.jpg"
-                                         alt="Картинка профиля">
-                                </picture>
-                            </div>
-                            <div class="header__descr">
-                                <div class="header__row">
-                                    <div class="header__nickname">
-                                        Test_User
-                                    </div>
-                                </div>
-                                <div class="header__member">
-                                    Группа 1
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="header__nav">
-                        <ul>
-                            <li class="header__link header__link-profile">
-                                <a href="{% url 'user_profile' username %}">Мой профиль</a>
-                            </li>
-                            <li class="header__link header__link-exit">
-                                <a href="{% url 'logout' %}">Выйти</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="social social-message">
-                    <div class="social__head">
-                        <div class="social__total">
-                            <div class="social__value">
-                                2
-                            </div>
-                            <div class="social__text">
-                                сообщений
-                            </div>
-                        </div>
-                        <div class="social__clear">
-                            <a href="">Очистить всё</a>
-                        </div>
-                    </div>
-                    <div class="social__wrapper">
-                        <div class="social__message">
-                            <div class="social__img">
-                                <picture>
-                                    <source srcset="{% static 'img/header/member.webp' %}"
-                                            type="image/webp">
-                                    <img src="{% static 'img/header/member.jpg' %}"
-                                         alt="Пользователь"></picture>
-                            </div>
-                            <div class="social__text">
-                                <div class="social__title">
-                                    Новое сообщение
-                                </div>
-                                <div class="social__from">
-                                    от <span>Сансан</span>
-                                </div>
-                                <div class="social__letter">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor...
-                                </div>
-                            </div>
-                            <div class="social__trash">
-                                <picture>
-                                    <source srcset="{% static 'img/icons/trash.webp' %}"
-                                            type="image/webp">
-                                    <img src="{% static 'img/icons/trash.png' %}" alt="Удалить">
-                                </picture>
-                            </div>
-                        </div>
-
-                        <div class="social__message">
-                            <div class="social__img">
-                                <picture>
-                                    <source srcset="{% static 'img/header/member2.webp' %}"
-                                            type="image/webp">
-                                    <img src="{% static 'img/header/member2.jpg' %}"
-                                         alt="Пользователь"></picture>
-                            </div>
-                            <div class="social__text">
-                                <div class="social__title">
-                                    Новое сообщение
-                                </div>
-                                <div class="social__from">
-                                    от <span>Лоли</span>
-                                </div>
-                                <div class="social__letter">
-                                    Lorem ipsum ????
-                                </div>
-                            </div>
-                            <div class="social__trash">
-                                <picture>
-                                    <source srcset="{% static 'img/icons/trash.webp' %}"
-                                            type="image/webp">
-                                    <img src="{% static 'img/icons/trash.png' %}" alt="Удалить">
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="social social-notification">
-                    <div class="social__head">
-                        <div class="social__total">
-                            <div class="social__value">
-                                2
-                            </div>
-                            <div class="social__text">
-                                уведомления
-                            </div>
-                        </div>
-                        <div class="social__clear">
-                            <a href="">Очистить всё</a>
-                        </div>
-                    </div>
-                    <div class="social__wrapper">
-                        <div class="social__message">
-                            <div class="social__img">
-                                <picture>
-                                    <source srcset="img/header/member.webp"
-                                            type="image/webp">
-                                    <img src="img/header/member.jpg"
-                                         alt="Пользователь"></picture>
-                            </div>
-                            <div class="social__text">
-                                <div class="social__title">
-                                    Новый комментарий
-                                </div>
-                                <div class="social__from">
-                                    от <span>Сансан</span>
-                                </div>
-                                <div class="social__letter">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor...
-                                </div>
-                            </div>
-                            <div class="social__trash">
-                                <picture>
-                                    <source srcset="img/icons/trash.webp"
-                                            type="image/webp">
-                                    <img src="img/icons/trash.png" alt="Удалить">
-                                </picture>
-                            </div>
-                        </div>
-
-                        <div class="social__message">
-                            <div class="social__img">
-                                <picture>
-                                    <source srcset="img/header/member2.webp"
-                                            type="image/webp">
-                                    <img src="img/header/member2.jpg"
-                                         alt="Пользователь"></picture>
-                            </div>
-                            <div class="social__text">
-                                <div class="social__title">
-                                    Новый комментарий
-                                </div>
-                                <div class="social__from">
-                                    от <span>Лоли</span>
-                                </div>
-                                <div class="social__letter">
-                                    Lorem ipsum ????
-                                </div>
-                            </div>
-                            <div class="social__trash">
-                                <picture>
-                                    <source srcset="img/icons/trash.webp"
-                                            type="image/webp">
-                                    <img src="img/icons/trash.png" alt="Удалить">
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </header>
-
-            <div class="header__line" id="header__line">
-                <div class="header__img">
-                    <picture>
-                        <source srcset="img/header/characters.webp"
-                                type="image/webp">
-                        <img src="img/header/characters.png" alt="Персонажи">
-                    </picture>
-                </div>
+               </div>
             </div>
-            <div class="main__wrapper">
-                <nav class="menu__main" id="menu__main">
-                    <ul class="menu__category menu__category-main">
-                        <li class="menu__item menu__item-main">
-                            <a class="menu_item_a" href="/">Главная</a>
-                        </li>
-                        <li class="menu__item menu__item-hot">
-                            <a class="menu_item_a" href="{% url 'popular_mods' %}">Популярное</a>
-                        </li>
-                        <li class="menu__item menu__item-how">
-                            <a class="menu_item_a" href="{% url 'how_to_install' %}">Как установить моды</a>
-                        </li>
-                    </ul>
-                        <ul class="menu__category">
-                            <div class="menu__title">
-                                Категории
-                            </div>
 
-                            <li class="dropdown leaf-node show__drop">
-                                <a class="dropdown__link current_category_link" href="{% url 'category' node.url %}">Test Category</a>
-                            </li>
-                        </ul>
-                </nav>
-                <div class="main__container">
-                    <section class="mod">
-                        BLOCK OF CONTENT (Поставил тут class="mod", чтобы order был 2, а то в свернутом виде меню налево уходит)
-                    </section>
-
-                    <div class="main__container-wrapper"></div>
-                    <div class="menu__small" id="menu__small">
-                        <a href="/" class="menu__small-item menu__small-main">
-                            <div class="menu__small-text">
-                                Главная
-                            </div>
-                        </a>
-                        <a href="{% url 'popular_mods' %}" class="menu__small-item menu__small-popular">
-                            <div class="menu__small-text">
-                                Популярное
-                            </div>
-                        </a>
-                        <div class="menu__small-item menu__small-category">
-                            <div class="menu__small-text">
-                                Категории
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="footer__wrapper container">
-                <div class="footer__descr">
-                    © sims-market
-                    <br>
-                    2018 - 2021
-                </div>
-                <div class="footer__social">
-                    <a href="https://vk.com/sims_market" class="footer__item" target="_blank">
+            <div class="header__menu">
+               <div class="header__wrapper">
+                  <div class="header__elem">
+                     <div class="header__profile">
                         <picture>
-                            <source srcset="img/footer/vk.webp" type="image/webp">
-                            <img src="img/footer/vk.png" alt="Вконтакте"></picture>
-                    </a>
-                </div>
+                           <img src="img/profile/item1.jpg" alt="Картинка профиля">
+                        </picture>
+                     </div>
+                     <div class="header__descr">
+                        <div class="header__row">
+                           <div class="header__nickname">
+                              Test_User
+                           </div>
+                        </div>
+                        <div class="header__member">
+                           Группа 1
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <nav class="header__nav">
+                  <ul>
+                     <li class="header__link header__link-profile">
+                        <a href="{% url 'user_profile' username %}">Мой профиль</a>
+                     </li>
+                     <li class="header__link header__link-exit">
+                        <a href="{% url 'logout' %}">Выйти</a>
+                     </li>
+                  </ul>
+               </nav>
             </div>
-        </footer>
-    </div>
 
-    <script src="js/script.min.js"></script>
-    </body>
-    </html>
+            <div class="social social-message">
+               <div class="social__head">
+                  <div class="social__total">
+                     <div class="social__value">
+                        2
+                     </div>
+                     <div class="social__text">
+                        сообщений
+                     </div>
+                  </div>
+                  <div class="social__clear">
+                     <a href="">Очистить всё</a>
+                  </div>
+               </div>
+               <div class="social__wrapper">
+                  <div class="social__message">
+                     <div class="social__img">
+                        <picture>
+                           <source srcset="{% static 'img/header/member.webp' %}" type="image/webp">
+                           <img src="{% static 'img/header/member.jpg' %}" alt="Пользователь"></picture>
+                     </div>
+                     <div class="social__text">
+                        <div class="social__title">
+                           Новое сообщение
+                        </div>
+                        <div class="social__from">
+                           от <span>Сансан</span>
+                        </div>
+                        <div class="social__letter">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                           eiusmod tempor...
+                        </div>
+                     </div>
+                     <div class="social__trash">
+                        <picture>
+                           <source srcset="{% static 'img/icons/trash.webp' %}" type="image/webp">
+                           <img src="{% static 'img/icons/trash.png' %}" alt="Удалить">
+                        </picture>
+                     </div>
+                  </div>
+
+                  <div class="social__message">
+                     <div class="social__img">
+                        <picture>
+                           <source srcset="{% static 'img/header/member2.webp' %}" type="image/webp">
+                           <img src="{% static 'img/header/member2.jpg' %}" alt="Пользователь"></picture>
+                     </div>
+                     <div class="social__text">
+                        <div class="social__title">
+                           Новое сообщение
+                        </div>
+                        <div class="social__from">
+                           от <span>Лоли</span>
+                        </div>
+                        <div class="social__letter">
+                           Lorem ipsum ????
+                        </div>
+                     </div>
+                     <div class="social__trash">
+                        <picture>
+                           <source srcset="{% static 'img/icons/trash.webp' %}" type="image/webp">
+                           <img src="{% static 'img/icons/trash.png' %}" alt="Удалить">
+                        </picture>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="social social-notification">
+               <div class="social__head">
+                  <div class="social__total">
+                     <div class="social__value">
+                        2
+                     </div>
+                     <div class="social__text">
+                        уведомления
+                     </div>
+                  </div>
+                  <div class="social__clear">
+                     <a href="">Очистить всё</a>
+                  </div>
+               </div>
+               <div class="social__wrapper">
+                  <div class="social__message">
+                     <div class="social__img">
+                        <picture>
+                           <source srcset="img/header/member.webp" type="image/webp">
+                           <img src="img/header/member.jpg" alt="Пользователь"></picture>
+                     </div>
+                     <div class="social__text">
+                        <div class="social__title">
+                           Новый комментарий
+                        </div>
+                        <div class="social__from">
+                           от <span>Сансан</span>
+                        </div>
+                        <div class="social__letter">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                           eiusmod tempor...
+                        </div>
+                     </div>
+                     <div class="social__trash">
+                        <picture>
+                           <source srcset="img/icons/trash.webp" type="image/webp">
+                           <img src="img/icons/trash.png" alt="Удалить">
+                        </picture>
+                     </div>
+                  </div>
+
+                  <div class="social__message">
+                     <div class="social__img">
+                        <picture>
+                           <source srcset="img/header/member2.webp" type="image/webp">
+                           <img src="img/header/member2.jpg" alt="Пользователь"></picture>
+                     </div>
+                     <div class="social__text">
+                        <div class="social__title">
+                           Новый комментарий
+                        </div>
+                        <div class="social__from">
+                           от <span>Лоли</span>
+                        </div>
+                        <div class="social__letter">
+                           Lorem ipsum ????
+                        </div>
+                     </div>
+                     <div class="social__trash">
+                        <picture>
+                           <source srcset="img/icons/trash.webp" type="image/webp">
+                           <img src="img/icons/trash.png" alt="Удалить">
+                        </picture>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </header>
+
+         <div class="header__line" id="header__line">
+            <div class="header__img">
+               <picture>
+                  <source srcset="img/header/characters.webp" type="image/webp">
+                  <img src="img/header/characters.png" alt="Персонажи">
+               </picture>
+            </div>
+         </div>
+         <div class="main__wrapper">
+            <nav class="menu__main" id="menu__main">
+               <ul class="menu__category menu__category-main">
+                  <li class="menu__item menu__item-main">
+                     <a class="menu_item_a" href="/">Главная</a>
+                  </li>
+                  <li class="menu__item menu__item-hot">
+                     <a class="menu_item_a" href="{% url 'popular_mods' %}">Популярное</a>
+                  </li>
+                  <li class="menu__item menu__item-how">
+                     <a class="menu_item_a" href="{% url 'how_to_install' %}">Как установить моды</a>
+                  </li>
+               </ul>
+               <ul class="menu__category">
+                  <div class="menu__title">
+                     Категории
+                  </div>
+
+                  <li class="dropdown leaf-node show__drop">
+                     <a class="dropdown__link current_category_link" href="{% url 'category' node.url %}">Test
+                        Category</a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="main__container">
+               <section class="mod">
+                  BLOCK OF CONTENT (Поставил тут class="mod", чтобы order был 2, а то в свернутом виде меню налево
+                  уходит)
+                  <div class="mod-container mod__container">
+                     <div class="add-mod__title">
+                        Добавить мод
+                     </div>
+                     <div class="mod-wrapper">
+                        <div class="modal__test">
+                           <form action="" class="mod-form">
+                              <div class="modal__item mod-form__item">
+                                 <div class="mod-form__title">
+                                    Категория
+                                 </div>
+                                 <select class="mod__select" name="mod" id="">
+                                    <option value="value1">Значение 1</option>
+                                    <option value="value2" selected>Значение 2</option>
+                                    <option value="value3">Значение 3</option>
+                                 </select>
+                              </div>
+                              <div class="modal__item mod-form__item">
+                                 <div class="mod-form__title">
+                                    Наименование
+                                 </div>
+                                 <input class="mod-form__name" type="text" placeholder="Придумайте название мода">
+                              </div>
+                              <div class="modal__item mod-form__item">
+                                 <div class="mod-form__title">
+                                    Описание
+                                 </div>
+                                 <textarea class="mod-form__description" rows="10" placeholder="Опишите свой мод :)"></textarea>
+                              </div>
+                              <div class="modal__item mod-form__item">
+                                 <div class="mod-form__title">
+                                    Изображение
+                                 </div>
+                                 <input class="mod-form__picture" type="file" name="" id="mod-picture">
+                              </div>
+                              <div class="modal__item mod-form__item">
+                                 <div class="mod-form__title">
+                                    Мод
+                                 </div>
+                                 <input class="mod-form__mod" type="file" name="" id="">
+                              </div>
+                              <div class="modal__item mod-form__item">
+                                 <div class="mod-form__title">
+                                    Теги (через запятую)
+                                 </div>
+                                 <input class="mod-form__tags" type="text">
+                              </div>
+                              <div class="mod-form__buttons">
+                                 <a href="{{ mod.mod.url }}" class="mod__button mod__button-save button mod-form__button">Отправить</a>
+                                 <a href="{{ mod.mod.url }}" class="mod__button mod__button-save button mod-form__button">Отправить</a>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+
+                  </div>
+               </section>
+
+               <div class="main__container-wrapper"></div>
+               <div class="menu__small" id="menu__small">
+                  <a href="/" class="menu__small-item menu__small-main">
+                     <div class="menu__small-text">
+                        Главная
+                     </div>
+                  </a>
+                  <a href="{% url 'popular_mods' %}" class="menu__small-item menu__small-popular">
+                     <div class="menu__small-text">
+                        Популярное
+                     </div>
+                  </a>
+                  <div class="menu__small-item menu__small-category">
+                     <div class="menu__small-text">
+                        Категории
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer class="footer">
+         <div class="footer__wrapper container">
+            <div class="footer__descr">
+               © sims-market
+               <br>
+               2018 - 2021
+            </div>
+            <div class="footer__social">
+               <a href="https://vk.com/sims_market" class="footer__item" target="_blank">
+                  <picture>
+                     <source srcset="img/footer/vk.webp" type="image/webp">
+                     <img src="img/footer/vk.png" alt="Вконтакте"></picture>
+               </a>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="js/script.min.js"></script>
+</body>
+
+</html>

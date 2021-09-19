@@ -277,7 +277,7 @@
             <div class="main__container">
                <section class="mod">
                   <div class="mod__fluid">
-                     <div class="mod__container">
+                     <div class="mod__container container__exchange">
                         <div class="crumbss">
                            <a href="/cat/{{ parent.url }}" class="crumbss__item">Cat 1</a>
                         </div>
@@ -333,12 +333,119 @@
                            <a href="{% url 'how_to_install' %}" class="mod__button button" target="_blank">КАК
                               УСТАНОВИТЬ</a>
                         </div>
+
+                        <div class="comments comment mod__comment">
+                           <!--<div class="comments__container">-->
+                              <div class="comments__title comments__title-topic">
+                                 Комментарии (<span class="comments__value">0</span>):
+                              </div>
+                              <div class="comments__wrapper">
+                                 <div class="comments__fluid">
+                                    <div class="comments__item">
+                                       <div class="comments__picture">
+                                          <a href="{% url 'user_profile' comment.parent_user.username %}">
+                                             <picture>
+                                                <img src="img/profile/item2.jpg" alt="Пользователь">
+                                             </picture>
+                                          </a>
+                                       </div>
+                                       <div class="comments__row">
+                                          <div class="comments__info">
+                                             <a href="{% url 'user_profile' comment.parent_user.username %}"
+                                                class="comments__name">
+                                                USER_1
+                                             </a>
+                                          </div>
+                                          <div class="comments__date">
+                                             Вчера
+                                          </div>
+                                          <div class="comments__message">
+                                             Круто!
+                                          </div>
+                                          <!--<div class="comments__reply">
+                                                     Ответить
+                                                  </div>-->
+                                       </div>
+                                    </div>
+                                    <!--<div class="comments__add">
+                                             <textarea class="comments__textarea" name="comment" id="" cols="30" rows="10" placeholder="Напишите комментарий"></textarea>
+                                          </div>-->
+                                 </div>
+      
+                                 <div class="comments__add" style="margin-top: 30px">
+                                    <form action="/mod/{{ mod.slug }}" method="POST">
+                                       <textarea class="comments__textarea" name="comment_text" id="" cols="30" rows="10"
+                                          placeholder="Напишите комментарий"></textarea>
+      
+                                       <button type="submit" class="button send_comment__button">Отправить</button>
+                                    </form>
+                                 </div>
+      
+                              </div>
+                           <!--</div>-->
+
+                     
+                     
+                     
                      </div>
-                     <div class="recommended mod__reccomended">
+                  </div>
+         
+                     <div data-da=".container__exchange,1452,7" class="recommended mod__recommended">
                         <div class="recommended__title">
                            Рекомендуемые моды
                         </div>
                         <div class="recommended__items">
+                           <a href='#' class="recommended__item">
+                              <div class="recommended__img">
+                                 <img src='img/recommendedMods/mod-1.jpg' alt="Имя мода">
+                              </div>
+                              <div class="recommended__info">
+                                 <div class="recommended__name">
+                                    Гостиная Ilum
+                                 </div>
+                                 <div class="reccomended__separator">
+                                    от
+                                 </div>
+                                 <div class="recommended__author">
+                                    ArtVintex
+                                 </div>
+                              </div>
+                           </a>
+
+                           <a href='#' class="recommended__item">
+                              <div class="recommended__img">
+                                 <img src='img/recommendedMods/mod-2.jpg' alt="Имя мода">
+                              </div>
+                              <div class="recommended__info">
+                                 <div class="recommended__name">
+                                    Гостиная Ilum
+                                 </div>
+                                 <div class="reccomended__separator">
+                                    от
+                                 </div>
+                                 <div class="recommended__author">
+                                    ArtVintex
+                                 </div>
+                              </div>
+                           </a>
+
+                           <a href='#' class="recommended__item">
+                              <div class="recommended__img">
+                                 <img src='img/recommendedMods/mod-3.jpg' alt="Имя мода">
+                              </div>
+                              <div class="recommended__info">
+                                 <div class="recommended__name">
+                                    Гостиная Ilum
+                                 </div>
+                                 <div class="reccomended__separator">
+                                    от
+                                 </div>
+                                 <div class="recommended__author">
+                                    ArtVintex
+                                 </div>
+                              </div>
+                           </a>
+
                            <a href='#' class="recommended__item">
                               <div class="recommended__img">
                                  <img src='img/recommendedMods/mod-1.jpg' alt="Имя мода">
@@ -394,56 +501,6 @@
                   </div>
 
 
-                  <div class="comments comment">
-                     <div class="comments__container">
-                        <div class="comments__title comments__title-topic">
-                           Комментарии (<span class="comments__value">0</span>):
-                        </div>
-                        <div class="comments__wrapper">
-                           <div class="comments__fluid">
-                              <div class="comments__item">
-                                 <div class="comments__picture">
-                                    <a href="{% url 'user_profile' comment.parent_user.username %}">
-                                       <picture>
-                                          <img src="img/profile/item2.jpg" alt="Пользователь">
-                                       </picture>
-                                    </a>
-                                 </div>
-                                 <div class="comments__row">
-                                    <div class="comments__info">
-                                       <a href="{% url 'user_profile' comment.parent_user.username %}"
-                                          class="comments__name">
-                                          USER_1
-                                       </a>
-                                    </div>
-                                    <div class="comments__date">
-                                       Вчера
-                                    </div>
-                                    <div class="comments__message">
-                                       Круто!
-                                    </div>
-                                    <!--<div class="comments__reply">
-                                               Ответить
-                                            </div>-->
-                                 </div>
-                              </div>
-                              <!--<div class="comments__add">
-                                       <textarea class="comments__textarea" name="comment" id="" cols="30" rows="10" placeholder="Напишите комментарий"></textarea>
-                                    </div>-->
-                           </div>
-
-                           <div class="comments__add" style="margin-top: 30px">
-                              <form action="/mod/{{ mod.slug }}" method="POST">
-                                 <textarea class="comments__textarea" name="comment_text" id="" cols="30" rows="10"
-                                    placeholder="Напишите комментарий"></textarea>
-
-                                 <button type="submit" class="button send_comment__button">Отправить</button>
-                              </form>
-                           </div>
-
-                        </div>
-                     </div>
-                  </div>
                </section>
 
                <div class="main__container-wrapper"></div>
@@ -484,7 +541,7 @@
          </div>
       </footer>
    </div>
-
+   <script src='js/dynamicAdapt.js'></script>
    <script src="js/script.min.js"></script>
 </body>
 
