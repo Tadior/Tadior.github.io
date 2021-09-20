@@ -280,8 +280,8 @@
             </nav>
             <div class="main__container">
                <section class="mod">
-                  BLOCK OF CONTENT (Поставил тут class="mod", чтобы order был 2, а то в свернутом виде меню налево
-                  уходит)
+                  <!--BLOCK OF CONTENT (Поставил тут class="mod", чтобы order был 2, а то в свернутом виде меню налево
+                  уходит)-->
                   <div class="mod-container mod__container">
                      <div class="add-mod__title">
                         Добавить мод
@@ -309,7 +309,7 @@
                                  <div class="mod-form__title">
                                     Описание
                                  </div>
-                                 <textarea class="mod-form__description" rows="10" placeholder="Опишите свой мод :)"></textarea>
+                                 <textarea class="mod-form__description" rows="5" placeholder="Опишите свой мод :)"></textarea>
                               </div>
                               <div class="modal__item mod-form__item">
                                  <div class="mod-form__title">
@@ -330,8 +330,7 @@
                                  <input class="mod-form__tags" type="text">
                               </div>
                               <div class="mod-form__buttons">
-                                 <a href="{{ mod.mod.url }}" class="mod__button mod__button-save button mod-form__button">Отправить</a>
-                                 <a href="{{ mod.mod.url }}" class="mod__button mod__button-save button mod-form__button">Отправить</a>
+                                 <button class="button mod-form__button" type="submit">Отправить</button>
                               </div>
                            </form>
                         </div>
