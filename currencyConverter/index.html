@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Currency Converter</title>
+   <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+   <link rel="stylesheet" href="font-awesome.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <main class="main">
+      <div class="converter">
+         <div class="converter__header">
+            Currency Converter
+         </div>
+         <div class="converter__amount">
+            <div class="title-amount">
+               Enter amount
+            </div>
+            <input id='amount' class="converter__input" type="text" placeholder="Input number">
+         </div>
+         <div class="converter__wrapper">
+            <div class="converter-currency">
+               <div class="headline headline--from">From</div>
+               <div class="select-box">
+                  <img src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" alt="">
+                  <select id="currency-from">
+                     <!--<option value="USD">USD</option>-->
+                     <!--<option value="RUB">RUB</option>-->
+                  </select>
+               </div>
+            </div>
+            <div class="icon">
+               <i class="fa fa-exchange"></i>
+            </div>
+            <div class="converter-currency">
+               <div class="headline headline--to">To</div>
+               <div class="select-box">
+                  <img src="http://purecatamphetamine.github.io/country-flag-icons/3x2/RU.svg" alt="">
+                  <select id="currency-to">
+                     <!--<option value="RUB">RUB</option>-->
+                     <!--<option value="USD">USD</option>-->
+                  </select>
+               </div>
+            </div>
+            <div id="output" class="output"></div>
+         </div>
+
+         <div class="converter__button">
+            <button id='convert' class="convert-btn">
+               Convert
+            </button>
+         </div>
+         <div class="converter-languages">
+            <div id="Russian" class="language-item">
+               <img class="language-img language" data-lang = 'RU' src="http://purecatamphetamine.github.io/country-flag-icons/3x2/RU.svg" alt="">
+            </div>
+            <div id="English" class="language-item">
+               <img class="language-img language language--active" data-lang = 'EN' src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" alt="">
+            </div>
+         </div>
+      </div>
+   </main>
+   <script src="https://use.fontawesome.com/189cad0192.js"></script>
+   <script src="script.js"></script>
+</body>
+
+</html>
