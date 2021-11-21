@@ -114,6 +114,7 @@ body {
    margin-top: 15px;
    flex: 1 1 100%;
    text-align: center;
+   height: 22px;
 }
 .error {
    color: red;
