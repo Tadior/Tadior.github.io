@@ -143,5 +143,6 @@ body {
 @media (max-width: 420px) {
    .converter {
       width: clamp(200px, 300px, 600px);
+      height: 290px;
    }
 }
